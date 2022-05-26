@@ -1,12 +1,4 @@
-interface IFormProps {
-  todo: {
-    task: string;
-    id: string | number;
-    completed: boolean;
-  };
-}
-
-const TodoItem = ({ todo }: IFormProps) => {
+const TodoItem = ({ todo }: ITodoProps) => {
   return (
     <>
       <h1>task - {todo.task}</h1>

@@ -1,21 +1,4 @@
-interface IFormProps {
-  todo: {
-    task: string;
-    id: string | number;
-    completed: boolean;
-  };
-  setTodo: React.Dispatch<
-    React.SetStateAction<{
-      task: string;
-      id: string;
-      completed: boolean;
-    }>
-  >;
-  onChange: (evt: React.ChangeEvent<HTMLInputElement>) => void;
-  onSubmit: (evt: React.FormEvent<HTMLFormElement>) => void;
-}
-
-const Form = ({ todo, setTodo, onChange, onSubmit }: IFormProps) => {
+const Form = ({ todo, onChange, onSubmit }: IFormProps) => {
   return (
     <form onSubmit={onSubmit}>
       <input
